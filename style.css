@@ -1,0 +1,122 @@
+body {
+    background-color: #f0f0f0f0;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+.card_content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+}
+.left_content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 10px;
+}
+.text_content {
+    flex-grow: 1;
+}
+.card_right {
+    width: 50%;
+    margin-left: 20px;
+}
+.iframe_map{
+    width: 100%;
+    height: 450px;
+    margin-left: 10px;
+}
+@media only screen and (max-width: 900px) {
+    .card_content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .left_content,
+    .card_right {
+        width: 100%;
+        margin: 0;
+    }
+    .iframe_map {
+        width: 100%;
+    }
+    .card {
+        margin: 20px;
+    }
+}
+.text_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+}
+
+
+
+.container-carousel {
+    position: relative;
+    max-width: 100%; /* Cambiado */
+    width: 500px; /* Cambiado */
+    height: 280px; /* Cambiado */
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.carruseles {
+    width: 1000%;
+    display: flex;
+    transition: transform 0.5s ease; /* Agregado */
+}
+.slider-section {
+    width: calc(100% / 10);
+    height: 280px;
+}
+.slider-section iframe,
+.slider-section img {
+    width: 100%; /* Cambiado */
+    height: 100%; /* Cambiado */
+    object-fit: cover;
+    border-radius: 15px;
+}
+.btn-left,
+.btn-right {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    transform: translate(0, -50%);
+}
+
+.btn-left:hover,
+.btn-right:hover {
+    background-color: #333333d4;
+}
+.btn-left {
+    left: 10px;
+}
+.btn-right {
+    right: 10px;
+}
