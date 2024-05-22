@@ -35,15 +35,23 @@ footer {
   .contact {
     text-align: left;
   }
-.portada{
+  .portada {
     min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background-image: url(/img/logo.webp);
-    background-position: center; /* Centra la imagen en el div */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: relative; 
 }
+.portada .fondo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    height: auto;
+    z-index: -1;
+}
+
 @media only screen and (max-width: 600px){
     footer {
       flex-direction: column;
