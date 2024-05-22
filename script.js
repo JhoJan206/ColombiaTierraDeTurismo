@@ -1,32 +1,36 @@
-const btnLeft = document.querySelector(".btn-left");
-const btnRight = document.querySelector(".btn-right");
-const slider = document.querySelector("#slider");
-const sliderSections = document.querySelectorAll(".slider-section");
-let counter = 0;
+document.querySelectorAll('.card').forEach((card, index) => {
+    const btnLeft = card.querySelector(".btn-left");
+    const btnRight = card.querySelector(".btn-right");
+    const slider = card.querySelector(".slider");
+    const sliderSections = card.querySelectorAll(".slider-section");
+    let counter = 0;
 
-btnLeft.addEventListener("click", moveToLeft);
-btnRight.addEventListener("click", moveToRight);
+    btnLeft.addEventListener("click", () => moveToLeft(slider, sliderSections));
+    btnRight.addEventListener("click", () => moveToRight(slider, sliderSections));
 
-function moveToRight() {
-    counter++;
-    if (counter >= 3) {
-        counter = 0;
+    function moveToRight(slider, sliderSections) {
+        counter++;
+        if (counter >= sliderSections.length) {
+            counter = 0;
+        }
+        moveSlider(slider, sliderSections);
     }
-    moveSlider();
-}
-function moveToLeft() {
-    counter--;
-    if (counter < 0) {
-        counter = sliderSections.length - 13;
+
+    function moveToLeft(slider, sliderSections) {
+        counter--;
+        if (counter < 0) {
+            counter = sliderSections.length - 1;
+        }
+        moveSlider(slider, sliderSections);
     }
-    moveSlider();
-}
-function moveSlider() {
-    let totalWidth = 0;
-    sliderSections.forEach(section => {
-        totalWidth += section.offsetWidth;
-    });
-    let slideWidth = totalWidth / sliderSections.length;
-    let slidePosition = -counter * slideWidth;
-    slider.style.transform = `translateX(${slidePosition}px)`;
-}
+
+    function moveSlider(slider, sliderSections) {
+        let totalWidth = 0;
+        sliderSections.forEach(section => {
+            totalWidth += section.offsetWidth;
+        });
+        let slideWidth = totalWidth / sliderSections.length;
+        let slidePosition = -counter * slideWidth;
+        slider.style.transform = `translateX(${slidePosition}px)`;
+    }
+});
