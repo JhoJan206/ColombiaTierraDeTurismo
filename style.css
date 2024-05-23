@@ -29,6 +29,16 @@ footer {
     justify-content: left;
     margin-right: 20px;
   }
+  footer .redes img {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    justify-content: left;
+    margin-right: 20px;
+  }
+  footer .redes img:hover {
+    opacity: 0.5;
+  }
   .info {
     text-align: center;
   }
