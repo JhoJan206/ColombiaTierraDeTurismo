@@ -1,7 +1,6 @@
 body {
     background-color: #dededef0;
     margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
 }
 header{
@@ -14,38 +13,36 @@ header{
 }
 footer {
     height: 100%;
+    margin-top: 30px;
     background-color: #fcfcfc;
     border: solid #00000025 1px;
     box-shadow: 0px 0px 8px 1px #8d8d8d;
-    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 10px;
-  }
-  footer img {
+}
+footer img {
     width: 250px;
     height: 80px;
     justify-content: left;
     margin-right: 20px;
-  }
-  footer .redes img {
+}
+footer .redes img {
     width: 40px;
     height: 40px;
     margin-top: 10px;
     justify-content: left;
     margin-right: 20px;
-  }
-  footer .redes img:hover {
+}
+footer .redes img:hover {
     opacity: 0.5;
-  }
-  .info {
+}
+.contact {
     text-align: center;
-  }
-  .contact {
-    text-align: left;
-  }
-  .portada {
+}
+.portada {
     min-height: 90vh;
     display: flex;
     justify-content: center;
@@ -61,7 +58,6 @@ footer {
     height: auto;
     z-index: -1;
 }
-
 @media only screen and (max-width: 600px){
     footer {
       flex-direction: column;
@@ -75,9 +71,6 @@ img{
 }
 img:hover{
     height: 80px;
-}
-.portada a img {
-    transition: transform 0.3s ease-in-out;
 }
 html {
     scroll-behavior: smooth;
@@ -95,17 +88,15 @@ html {
 .card_content {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     padding: 30px;
 }
 .left_content {
+    max-width: 700px;
     display: flex;
     align-items: center;
+    text-align: center;
     flex-direction: column;
     margin-right: 10px;
-}
-.text_content {
-    flex-grow: 1;
 }
 .card_right {
     width: 50%;
